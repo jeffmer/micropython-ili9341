@@ -126,19 +126,19 @@ class ILI9341:
             self._write(_MADCTL, b"\xE8")
             self.width = self._init_width
             self.height = self._init_height
-        elif self.rotation == 4:                # Mirrored + 180 deg
+        elif self.rotation == 4:                # Mirrored + 0 deg
             self._write(_MADCTL, b"\xC8")
             self.width = self._init_height
             self.height = self._init_width
-        elif self.rotation == 5:                # Mirrored + 270 deg
+        elif self.rotation == 5:                # Mirrored + 90 deg
             self._write(_MADCTL, b"\x68")
             self.width = self._init_width
             self.height = self._init_height
-        elif self.rotation == 6:                # Mirrored + 0 deg
+        elif self.rotation == 6:                # Mirrored + 180 deg
             self._write(_MADCTL, b"\x08")
             self.width = self._init_height
             self.height = self._init_width
-        elif self.rotation == 7:                # Mirrored + 90 deg
+        elif self.rotation == 7:                # Mirrored + 270 deg
             self._write(_MADCTL, b"\xA8")
             self.width = self._init_width
             self.height = self._init_height
