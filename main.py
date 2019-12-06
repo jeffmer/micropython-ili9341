@@ -28,7 +28,11 @@ display = ILI9341(
     spi,
     cs=Pin(m5stack.TFT_CS_PIN),
     dc=Pin(m5stack.TFT_DC_PIN),
-    rst=Pin(m5stack.TFT_RST_PIN))
+    rst=Pin(m5stack.TFT_RST_PIN),
+    w=320,
+    h=240,
+    r=3)
+
 display.erase()
 display.set_pos(0,0)
 for ff in fonts:
