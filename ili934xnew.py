@@ -183,7 +183,7 @@ class ILI9341:
         self._write(_PASET, ustruct.pack(">HH", y0, y1))
         self._write(_RAMWR, data)
 
-    def _readblock(self, x0, y0, x1, y1):
+    def _readblock(self, x0, y0, x1, y1, data=None):
         self._write(_CASET, ustruct.pack(">HH", x0, x1))
         self._write(_PASET, ustruct.pack(">HH", y0, y1))
         if data is None:
